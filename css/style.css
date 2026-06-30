@@ -1,0 +1,200 @@
+/* ===== ОБЩИЕ СТИЛИ ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* ===== КОНТЕЙНЕР ===== */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* ===== HEADER ===== */
+
+.header {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+
+/* ===== КАРТОЧКИ ===== */
+
+.card {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    margin-bottom: 20px;
+    color: #1d4ed8;
+}
+
+
+/* ===== ФОРМЫ ===== */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.2);
+}
+
+
+/* ===== ИНТЕРВАЛ ===== */
+
+.interval-group {
+    display: flex;
+    gap: 20px;
+}
+
+.interval-group .form-group {
+    flex: 1;
+}
+
+
+/* ===== КНОПКА ===== */
+
+button {
+    width: 100%;
+    border: none;
+    background-color: #2563eb;
+    color: white;
+    padding: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+
+/* ===== ГРАФИК ===== */
+
+canvas {
+    width: 100% !important;
+    max-height: 500px;
+}
+
+
+/* ===== ТАБЛИЦА ===== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #2563eb;
+    color: white;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #e5e7eb;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+tbody tr:hover {
+    background-color: #dbeafe;
+}
+
+
+/* ===== БЛОКИ С РЕЗУЛЬТАТАМИ ===== */
+
+#rootsContainer,
+#extremaContainer {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* ===== FOOTER ===== */
+
+.footer {
+    text-align: center;
+    padding: 30px;
+    color: gray;
+    font-size: 14px;
+}
+
+
+/* ===== АДАПТИВНОСТЬ ===== */
+
+@media (max-width: 768px) {
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .interval-group {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+}

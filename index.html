@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анализатор математических функций</title>
+    <meta
+        name="description"
+        content="Веб-приложение для построения графиков функций, поиска корней, экстремумов и формирования таблицы значений."
+    >
+    <meta
+        name="keywords"
+        content="математика, функции, графики, анализ функций, JavaScript, Chart.js"
+    >
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Math.js -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/14.7.0/math.min.js">
+    </script>
+    <!-- Chart.js -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/chart.js">
+    </script>
+    <!-- Zoom Plugin -->
+    <script 
+        src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.2.0/dist/chartjs-plugin-zoom.min.js">
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>
+                Анализатор математических функций
+            </h1>
+            <p class="subtitle">
+                Построение графиков, поиск корней и анализ экстремумов
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Блок ввода -->
+        <section class="card">
+            <h2>Ввод данных</h2>
+            <div class="form-group">
+                <label for="functionInput">
+                    Функция:
+                </label>
+                <input
+                    id="functionInput"
+                    type="text"
+                    placeholder="Например: x^2 - 4*x + 3"
+                >
+            </div>
+
+            <div class="interval-group">
+
+                <div class="form-group">
+
+                    <label for="startX">
+                        Начало интервала
+                    </label>
+
+                    <input
+                        id="startX"
+                        type="number"
+                        value="-10"
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="endX">
+                        Конец интервала
+                    </label>
+
+                    <input
+                        id="endX"
+                        type="number"
+                        value="10"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <button id="buildButton">
+                Построить график
+            </button>
+        </section>
+
+
+        <!-- График -->
+
+        <section class="card">
+            <h2>График функции</h2>
+            <canvas id="functionChart">
+            </canvas>
+        </section>
+
+
+        <!-- Корни -->
+        <section class="card">
+            <h2>Корни функции</h2>
+            <div id="rootsContainer">
+                Корни пока не найдены
+            </div>
+        </section>
+
+
+        <!-- Экстремумы -->
+        <section class="card">
+            <h2>Экстремумы</h2>
+            <div id="extremaContainer">
+                Данные отсутствуют
+            </div>
+        </section>
+
+
+        <!-- Таблица -->
+        <section class="card">
+            <h2>Таблица значений</h2>
+            <table id="valuesTable">
+                <thead>
+                    <tr>
+                        <th>X</th>
+                        <th>Y</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <p>
+            Учебный проект
+        </p>
+    </footer>
+
+    <!-- Скрипты -->
+
+    <script src="js/graph.js"></script>
+    <script src="js/table.js"></script>
+    <script src="js/roots.js"></script>
+    <script src="js/extrema.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
